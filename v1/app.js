@@ -9,3 +9,13 @@ function add(){
     mylist.appendChild(Li)
     InputValue.value = null
 }
+
+function toggleFullscreen(button) {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen();
+        button.innerHTML = '<i class="fas fa-compress fa-lg"></i>';
+    } else if (document.exitFullscreen) {
+        document.exitFullscreen();
+        button.innerHTML = '<i class="fas fa-expand fa-lg"></i>';
+    }
+}
