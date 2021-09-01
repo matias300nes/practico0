@@ -1,0 +1,166 @@
+html{
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #2c2c2c;
+    background: #e0e0e0;
+    box-shadow: inset 12px 12px 39px #8d8d8d,
+            inset -12px -12px 39px #ffffff;
+}
+
+.todo-box{
+    margin: 10vh auto;
+    height: 75vh;
+    width: 30vw;
+    min-width: 400px;
+    padding: 5px 30px 30px 30px;
+    text-align: center;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  30px 30px 59px #bebebe,
+                -30px -30px 59px #ffffff;
+}
+
+.header{
+    font-weight: lighter;
+}
+
+.form{
+    margin-bottom: 30px;
+}
+
+#textinput{
+    transition: 0.5s;
+    height: 5vh;
+    width: 70%;
+    padding-left: 20px;
+    background-color: transparent;
+    color: #2c2c2c;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 1px solid #8d8d8d;
+    border-radius: 20px;
+}
+
+#textinput:focus{
+    transition: 0.5s;
+    outline: none;
+    border-color: #7fbbff
+}
+
+.add-button{
+    color: #8d8d8d;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    transition: 0.5s;
+    height: 5.6vh;
+    width: 15%;  
+    background: transparent;
+    border: 1px solid #8d8d8d;
+    border-radius: 20px;   
+}
+
+.add-button:hover{
+    font-weight: bold;
+    color: #fff;
+    border-color: #0075FF;
+    transition: 0.5s;
+    background: #0075FF;
+}
+
+#mylist{
+    height: 50vh;
+    overflow-y: auto;
+    margin-top: 30px;
+    padding: 0;
+    list-style: none;
+    font-style: oblique;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#mylist::-webkit-scrollbar {
+    display: none;
+}
+
+.list-item{
+    transition: 2s;
+    display:table;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.check-and-text{
+    display: flex;
+}
+
+.checkmark {
+    margin-right: 30px;
+    width: 20px;
+    height: 20px;
+}
+
+.text {
+    margin: 0;
+    padding: 0;
+}
+
+.checked {
+    transition: 1s;
+    position: relative;
+    color: #8d8d8d;
+}
+.checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 44px;
+    width: 100%;
+    height: 1px;
+    background: #8d8d8d;
+    animation-name: strike;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; 
+}
+
+@keyframes strike{
+    0%   { width : 0%; }
+    100% { width: 90%; }
+}
+
+.fullscreen{
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    position: relative;
+    top: -47px;
+    right: -165px;
+}
+
+.fullscreen:hover{
+    transition: 1s;
+    transform: scale(1.2, 1.2);
+}
+
+.btn{
+    transition: 1s;
+    border: 1px solid #8d8d8d;
+    border-radius: 3px;
+    height: 100%;
+    margin-left: 3px;
+}
+
+.btn:hover{
+    color: white;
+    transition: 1s;
+}
+
+.delete:hover{
+    border: 1px solid rgb(253, 113, 113);
+    background-color: rgb(253, 113, 113);
+}
+
+.primary:hover{
+    border: 1px solid #0075FF;
+    background-color: #0075FF;
+}
