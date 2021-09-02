@@ -89,6 +89,7 @@ window.onload = () => {
             geo = {lat: position.coords.latitude, lon: position.coords.longitude}
         });
     }
-    tasks = JSON.parse(sessionStorage.getItem('list'))
+    response = JSON.parse(sessionStorage.getItem('list'))
+    tasks = response == null ? [] : response
     tasks.map((task) => {display_task(task)})
 }
