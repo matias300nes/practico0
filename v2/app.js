@@ -8,7 +8,7 @@ function update_storage(){
 
 //Muestra una tarea en la lista
 function display_task(task){
-    checkbox = `<input class="checkmark" type="checkbox" onClick="update_check(this.parentElement)">` //done logic
+    checkbox = `<input class="checkmark" type="checkbox" onClick="update_check(this.parentElement)" ${task.done ? 'checked':''}>` //done logic
     deletebutton = `<button class="btn delete" onClick="remove(this.closest('li'))"><i class="far fa-trash-alt"></i></button>` //delete logic
     sharebutton = `<button class="btn primary" onClick="share(this.closest('li'))"><i class="far fa-share-square"></i></button>` //share logic
     copybutton = `<button class="btn primary" onClick="copy(this.closest('li'))"><i class="far fa-copy"></i></button>` //copy logic
