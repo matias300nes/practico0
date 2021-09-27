@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do</title>
+    <link rel="icon" href="https://gw.alipayobjects.com/zos/antfincdn/4zAaozCvUH/unexpand.svg" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wrapper">
+        <input id="a11y-issue-1" name="a11y-issues" type="checkbox" value="no-issues">
+        <label for="a11y-issue-1">dasdasdsa</label>
+    </div>
+    <div class="todo-box">
+        <div>
+            <h2 class="header">ToDo List v3</h2>
+            <button class="btn fullscreen" onClick="toggleFullscreen(this)"><i class="fas fa-expand fa-lg"></i></button>
+        </div>
+        <form action="JavaScript:add()" class="form">
+            <input type="text" id="textinput" placeholder="Escribe una tarea" maxlength="32" required>
+            <button class="btn add-button" type="submit"><i class="fas fa-check fa-lg"></i></button>
+        </form>
+        <hr>
+        <ul id="mylist"></ul>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

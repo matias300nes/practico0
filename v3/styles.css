@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+html {
+  background-color: #222222;
+  font-family: 'Roboto', sans-serif;
+}
+
+.todo-box {
+  max-width: 32rem;
+  margin: auto;
+}
+
+.todo-box > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+  margin-bottom: 1.75rem;
+  padding-right: 0.5rem;
+}
+
+.todo-box > div > h2 {
+  color: #FFFFFF;
+  margin: auto 0;
+  font-weight: normal;
+}
+
+.todo-box > form {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-box > form > input {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin-right: 0.5rem;
+}
+
+.todo-box > form > input:focus {
+  outline: none;
+}
+
+.todo-box > hr {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 1rem 0 1rem 0;
+}
+
+#mylist {
+  margin: 0;
+  padding: 0;
+}
+
+#mylist > li {
+  margin: 0;
+  margin-top: 0.5rem;
+  border-radius: 0.25rem;
+  padding: 0 0.25rem 0 0.25rem;
+  background: rgba(255, 255, 255, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#mylist > li .check-and-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #FFFFFF;
+  font-size: 1.25rem;
+}
+
+#mylist > li .check-and-text > input {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-right: 0.75rem;
+  color-scheme: dark;
+  accent-color: #FFFFFF;
+}
+
+#mylist > li > div > button {
+  font-size: 1.25rem;
+  margin: 0.5rem 0.25rem;
+}
+
+.btn {
+  height: 3rem;
+  width: 3rem;
+  border: 1px solid;
+  border-radius: 4px;
+  background: none;
+  color: #FFFFFF;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+/*style wrapper to give some space*/
+.wrapper {
+  position: relative;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+/*style label to give some more space*/
+.wrapper label {
+  display: block;
+  padding: 12px 0 12px 48px;
+}
+
+/*style and hide original checkbox*/
+.wrapper input {
+  height: 1.25rem;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 1.25rem;
+}
+
+/*position new box*/
+.wrapper input + label::before {
+  border-radius: 0.25rem;
+  border: 2px solid white;
+  content: "";
+  height: 1.25rem;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1.25rem;
+}
+
+/*create check symbol with pseudo element*/
+.wrapper input + label::after {
+  content: "";
+  border: 2px solid white;
+  border-left: 0;
+  border-top: 0;
+  height: 10px;
+  left: 8px;
+  opacity: 0;
+  position: absolute;
+  top: 4px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  width: 6px;
+}
+
+/*reveal check for 'on' state*/
+.wrapper input:checked + label::after {
+  opacity: 1;
+}
+/*# sourceMappingURL=styles.css.map */
