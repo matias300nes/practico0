@@ -2,6 +2,11 @@
 html {
   background-color: #222222;
   font-family: 'Roboto', sans-serif;
+  color-scheme: dark;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 .todo-box {
@@ -28,7 +33,11 @@ html {
 }
 
 .todo-box > form {
-  background-color: rgba(255, 255, 255, 0.2);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5%;
+  width: 31rem;
+  background-color: #4E4E4E;
   padding: 0.5rem;
   border-radius: 0.25rem;
   display: -webkit-box;
@@ -55,7 +64,7 @@ html {
 }
 
 .todo-box > hr {
-  border-color: rgba(255, 255, 255, 0.2);
+  border-color: #4E4E4E;
   margin: 1rem 0 1rem 0;
 }
 
@@ -69,7 +78,7 @@ html {
   margin-top: 0.5rem;
   border-radius: 0.25rem;
   padding: 0 0.25rem 0 0.25rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: #4E4E4E;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -93,8 +102,11 @@ html {
   height: 1.25rem;
   width: 1.25rem;
   margin-right: 0.75rem;
-  color-scheme: dark;
   accent-color: #FFFFFF;
+}
+
+#mylist > li .checked {
+  text-decoration: line-through;
 }
 
 #mylist > li > div > button {
@@ -109,70 +121,5 @@ html {
   border-radius: 4px;
   background: none;
   color: #FFFFFF;
-}
-
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
-}
-
-/*style wrapper to give some space*/
-.wrapper {
-  position: relative;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-/*style label to give some more space*/
-.wrapper label {
-  display: block;
-  padding: 12px 0 12px 48px;
-}
-
-/*style and hide original checkbox*/
-.wrapper input {
-  height: 1.25rem;
-  left: 0;
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  width: 1.25rem;
-}
-
-/*position new box*/
-.wrapper input + label::before {
-  border-radius: 0.25rem;
-  border: 2px solid white;
-  content: "";
-  height: 1.25rem;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1.25rem;
-}
-
-/*create check symbol with pseudo element*/
-.wrapper input + label::after {
-  content: "";
-  border: 2px solid white;
-  border-left: 0;
-  border-top: 0;
-  height: 10px;
-  left: 8px;
-  opacity: 0;
-  position: absolute;
-  top: 4px;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-  width: 6px;
-}
-
-/*reveal check for 'on' state*/
-.wrapper input:checked + label::after {
-  opacity: 1;
 }
 /*# sourceMappingURL=styles.css.map */

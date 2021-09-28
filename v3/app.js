@@ -93,3 +93,11 @@ window.onload = () => {
     tasks = response == null ? [] : response
     tasks.map((task) => {display_task(task)})
 }
+
+//overflow listener
+const html = document.querySelector("html")
+const ul = document.querySelector("#mylist")
+
+html.addEventListener('overflow', () => {
+    ul.classList.add('floating')
+})
