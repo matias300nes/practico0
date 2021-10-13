@@ -36,7 +36,6 @@ html::-webkit-scrollbar {
   position: -webkit-sticky;
   position: sticky;
   top: 5%;
-  width: 31rem;
   background-color: #4E4E4E;
   padding: 0.5rem;
   border-radius: 0.25rem;
