@@ -1,0 +1,117 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+    --primary:#222222;
+    --secondary: #4E4E4E;
+    --font: #FFFFFF;
+}
+
+
+html{
+    background-color: var(--primary);
+    font-family: 'Roboto', sans-serif;
+    color-scheme: dark;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    
+}
+
+.todo-box{
+    max-width: 32rem;
+    margin: auto;
+
+    > div{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2rem;
+        margin-bottom: 1.75rem;
+        padding-right: 0.5rem;
+    }
+
+    > div > h2{
+        color: var(--font);
+        margin: auto 0;
+        font-weight: normal;
+    }
+
+    > form{
+        position: -webkit-sticky;
+        position: sticky;
+        top: 5%;
+        //width: 31rem;
+        background-color: var(--secondary);
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+
+        > input{
+            font-size: 1.5rem;
+            color: var(--font);
+            background-color: transparent;
+            border: none;
+            flex-grow: 1;
+            width: 100%;
+            margin-right: 0.5rem;
+            &:focus{
+                outline: none;
+            }
+        }
+    }
+
+    > hr{
+        border-color: var(--secondary);
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+#mylist{
+    margin: 0;
+    padding: 0;
+    > li{
+        margin: 0;
+        margin-top: 0.5rem;
+        border-radius: 0.25rem;
+        padding: 0 0.25rem 0 0.25rem;
+        background: var(--secondary);
+        display: flex;
+        justify-content: space-between;
+        
+        .check-and-text{
+            display: flex;
+            align-items: center;
+            color: var(--font);
+            font-size: 1.25rem;
+            > input{
+                height: 1.25rem;
+                width: 1.25rem;
+                margin-right: 0.75rem;
+                accent-color: var(--font);
+            }
+        }
+
+        .checked{
+            text-decoration:line-through;
+        }
+
+        > div > button{
+            font-size: 1.25rem;
+            margin: 0.5rem 0.25rem;
+            
+        }
+    }
+
+}
+
+.btn{
+    min-width: 3rem;
+    height: 3rem;
+    width: 3rem;
+    border: 1px solid;
+    border-radius: 4px;
+    background: none;
+    color: var(--font);
+}
+
